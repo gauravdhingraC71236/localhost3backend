@@ -2,7 +2,8 @@ import requests
 from flask import Flask, request, jsonify
 from fuzzywuzzy import fuzz
 from models import db, Item
-from secrets_1 import LLAMA_API_KEY
+import os
+LLAMA_API_KEY = os.environ.get('LLAMA_API_KEY')
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///items.db'
