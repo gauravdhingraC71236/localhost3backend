@@ -12,7 +12,8 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-LLAMA_API_URL = "https://pkosc7r8nk-vpce-0e881c3ec15437336.execute-api.eu-west-1.amazonaws.com/llama-3-8b"
+#LLAMA_API_URL = "https://pkosc7r8nk-vpce-0e881c3ec15437336.execute-api.eu-west-1.amazonaws.com/llama-3-8b"
+LLAMA_API_URL = "https://049liz4c7i-vpce-0e881c3ec15437336.execute-api.eu-west-1.amazonaws.com/llama-3-70b"
 
 @app.route('/items', methods=['POST'])
 def add_item():
